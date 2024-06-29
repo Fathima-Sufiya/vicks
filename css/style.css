@@ -92,7 +92,6 @@ nav label.bars{
     top: 0;
     padding: 0 3rem;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center; 
     font-family: 'Intro-regular';
@@ -115,11 +114,15 @@ nav label.bars{
 
 #home .wrapper header .left{
    width: 5%;
+   order: 1;
 }
 
 #home .wrapper header .left a img{
     display: block;
     width: 100%;
+}
+#home .wrapper header .middle{
+    order: 2;
 }
 #home .wrapper header .middle ul li .icon{
     display:none;
@@ -135,7 +138,9 @@ nav label.bars{
 #home .wrapper header .middle ul li a{
     font-size: 10px;
 }
-
+#home .wrapper header .right{
+    order: 3;
+}
 #home .wrapper #spotlight{
     text-align: center;
     margin-top: 40%;
@@ -290,8 +295,10 @@ footer .boxes ul{
     width: 20%;
     line-height: 2rem;
 }
-footer .boxes ul li h1{
+footer .boxes ul li h5{
     color: #fff;
+    font-family: 'Intro-regular';
+    font-size: 20px;
 }
 footer .boxes ul.icons{
     display: flex;
@@ -312,9 +319,16 @@ footer .boxes ul li.link h1{
     font-size: 20px;
     font-family: 'Intro-regular';
 }
-footer .boxes ul li.link i.icon{
+footer .boxes ul li.link button{
+    background-color: transparent;
+    border:0px
+}
+footer .boxes ul li.link button .icon{
     display: none;
     color: #fff;
+    cursor: pointer;
+    
+
 }
 footer .middle{
     display: flex;
@@ -430,8 +444,9 @@ footer .end ul li a{
     }
     footer .boxes ul li.link i.icon {
         display: block;
+        cursor: pointer;
     }
-    footer .boxes ul li.link{
+    footer .boxes ul li.link {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -466,6 +481,12 @@ footer .end ul li a{
             padding-top: 2rem;
             transition: all 0.5s ease;
             
+        }
+        #home .wrapper header .left{
+            order: 2;
+        }
+        #home .wrapper header .middle{
+            order: 1;
         }
         #home .wrapper header .middle ul li{
             margin: 4.8rem 0;
