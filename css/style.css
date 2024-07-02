@@ -88,7 +88,7 @@ nav label.bars{
 #home .wrapper header{
     height: 80px;
     position: fixed;
-    z-index: 5;
+    z-index: 5; 
     top: 0;
     padding: 0 3rem;
     display: flex;
@@ -96,9 +96,7 @@ nav label.bars{
     align-items: center; 
     font-family: 'Intro-regular';
 }
-#home .wrapper header.scrolled{
-    background-color: #fff;
-}
+
 #home .wrapper header.scrolled nav.middle ul li{
     display: inline-block;
 }
@@ -186,9 +184,11 @@ nav label.bars{
 #favorites .favorite_top h3{
     color: rgba(9, 53, 122);;
     font-size: 25px;
+    font-family: 'Intro-regular';
 }
 #favorites .favorite_top a.button{
     color: rgba(9, 53, 122);
+    font-family: 'Intro';
     
 }
 
@@ -469,6 +469,18 @@ footer .end ul li a{
     }
 }
     @media screen and (max-width:768px) {
+        #home .wrapper header.scrolled nav.middle ul {
+            height: 100vh;
+         
+        }
+        #home .wrapper header.scrolled nav.middle ul li{
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        #home .wrapper header.scrolled nav.middle ul li a{
+            color: #000;
+        }
         header .middle ul{
             display: block;
             position: fixed;
@@ -482,17 +494,20 @@ footer .end ul li a{
             transition: all 0.5s ease;
             
         }
+        
         #home .wrapper header .left{
             order: 2;
         }
         #home .wrapper header .middle{
             order: 1;
+            
         }
         #home .wrapper header .middle ul li{
             margin: 4.8rem 0;
             display: flex;
             justify-content: space-between;
             padding: 0 2rem;
+            
         }
         #home .wrapper header .middle ul li a.icon{
             display: block;
@@ -506,7 +521,6 @@ footer .end ul li a{
         }
         nav label.bars{
             display: block;
-            
             
         }
         #check:checked ~ label.bars{
@@ -534,11 +548,13 @@ footer .end ul li a{
         #home .wrapper header div.right .icon{
             font-size: 25px;
             order:3;
-        
+            
             
         }
         #home .wrapper header{
             padding: 0 2rem; 
+            
+           
             
         }
         #favorites .wrapper .middle {
